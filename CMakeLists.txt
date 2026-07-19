@@ -3,3 +3,4 @@ project(TDDEmbeddedC C)
 set(CMAKE_C_STANDARD 99)
 
 add_subdirectory(example1)
+add_subdirectory(example2)
