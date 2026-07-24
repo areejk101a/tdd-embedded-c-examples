@@ -23,9 +23,9 @@ file(GLOB_RECURSE PLAT_SOURCES CONFIGURE_DEPENDS
     "${CMAKE_CURRENT_SOURCE_DIR}/platform/*.c"
 )
 
-file(GLOB_RECURSE MOCK_SOURCES CONFIGURE_DEPENDS
-    "${CMAKE_CURRENT_SOURCE_DIR}/mocks/*.c"
-)
+# file(GLOB_RECURSE MOCK_SOURCES CONFIGURE_DEPENDS
+#     "${CMAKE_CURRENT_SOURCE_DIR}/mocks/*.c"
+# )
 
 
 #
@@ -47,7 +47,7 @@ target_include_directories(fpExample_app PRIVATE
 add_executable(fpExample_tests
     ${APP_SOURCES}
     ${TEST_SOURCES}
-    ${MOCK_SOURCES}
+    # ${MOCK_SOURCES}
     ${PROJECT_SOURCE_DIR}/../unity/src/unity.c
     ${PROJECT_SOURCE_DIR}/../unity/extras/fixture/src/unity_fixture.c
     ${PROJECT_SOURCE_DIR}/../unity/extras/memory/src/unity_memory.c
@@ -55,7 +55,7 @@ add_executable(fpExample_tests
 
 target_include_directories(fpExample_tests PRIVATE
     include
-    ${CMAKE_CURRENT_SOURCE_DIR}/mocks
+    # ${CMAKE_CURRENT_SOURCE_DIR}/mocks
     ${PROJECT_SOURCE_DIR}/../unity/src
     ${PROJECT_SOURCE_DIR}/../unity/extras/fixture/src/
     ${PROJECT_SOURCE_DIR}/../unity/extras/memory/src

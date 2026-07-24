@@ -13,11 +13,24 @@ void update_sensor()
 
 bool Thermal_Update(bool *alarm)
 {
-    if (alarm == nullptr )
-        return false;
+    // if (alarm == nullptr )
+    //     return false;
     
     int temp = 0;
     bool ret = I2cRead(SENSOR_1, &temp); // DOC
     
-    return false;
+    
+    return true;
 }
+
+
+
+// bool TempController_IsOverheating(void) {
+//     // Calling the function pointer hook
+//     int16_t current_temp = ReadSensor(REG_TEMP_DATA);
+    
+//     if (current_temp > 85) {
+//         return true;
+//     }
+//     return false;
+// }

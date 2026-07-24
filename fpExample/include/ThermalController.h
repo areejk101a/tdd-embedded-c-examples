@@ -5,5 +5,4 @@
 
 bool Thermal_Update(bool *alarm);
 
-
 #endif

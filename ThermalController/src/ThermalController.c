@@ -13,8 +13,8 @@ void update_sensor()
 
 bool Thermal_Update(bool *alarm)
 {
-    if (alarm == nullptr )
-        return false;
+    // if (alarm == nullptr )
+    //     return false;
     
     int temp = 0;
     bool ret = I2cRead(SENSOR_1, &temp); // DOC
